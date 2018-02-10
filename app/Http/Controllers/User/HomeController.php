@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Classes\driver\News;
 use App\Classes\Mails;
+use App\CommentModel;
 
 class HomeController extends Controller
 {
@@ -26,10 +27,22 @@ class HomeController extends Controller
 
     }
 
-    public function post(Request $request)
+    public function post2(Request $request)
     {
-        if ($request->ajax()) {
+        return $request->all();
+        $commentModel=new CommentModel();
+        $commentModel->name=$request->name;
+        $commentModel->email=$request->email;
+        $commentModel->phone=$request->number;
+        $commentModel->care=$request->important;
+        $commentModel->message=$request->suggested;
+        if($commentModel->save()){
+            session()->flash('message', 'با موفقیت ثبت‍‍ شد');
         }
+        else{
+            session()->flash('message', 'سلام امید');
+        }
+        return 1;
+        return redirect()->back();
     }
-
 }

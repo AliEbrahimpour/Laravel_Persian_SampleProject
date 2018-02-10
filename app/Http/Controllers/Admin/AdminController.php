@@ -31,4 +31,8 @@ class AdminController extends Controller
             //page moshkele fani
         }
     }
+
+    public function set(request $request){
+        var_dump($request);
+    } 
 }

@@ -12,6 +12,7 @@
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth_admin'], function () {
+
     Route::get('home', 'Admin\AdminController@get');
     Route::get('news/list/{page_num}', 'Admin\NewsController@get');
     Route::get('news/new', 'Admin\NewsNewController@get');
@@ -81,10 +82,10 @@ Route::get('not_found', 'Admin\NotFoundController@get');
 Route::group(['prefix' => 'user'], function () {
 
     Route::get('home', 'User\HomeController@get');
-    Route::post('home/post', 'User\HomeController@post');
+    Route::post('home2', 'User\HomeController@post2')->name('home');
 
     Route::get('news/details', 'User\NewsDetailsController@get');
-
+   
 
 });
 
