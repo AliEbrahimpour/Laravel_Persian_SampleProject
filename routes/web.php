@@ -75,6 +75,7 @@ Route::get('admin/login', ['as' => 'login', 'uses' => 'Admin\LoginController@get
 Route::post('admin/login/post', 'Admin\LoginController@post');
 Route::post('admin/logout', 'Admin\LogoutController@logout');
 Route::get('suggest', 'User\HomeController@suggest');
+Route::post('sendsuggest', 'User\HomeController@sendsuggest');
 Route::get('not_found', 'Admin\NotFoundController@get');
 
 

@@ -26,14 +26,15 @@ class HomeController extends Controller
 
     }
 
-    public function post(Request $request)
-    {
-        if ($request->ajax()) {
-        }
-    }
+
 
     public function suggest(){
         return view('user.suggest');
     }
+
+    public function sendsuggest(Request $request){
+        
+    }
+
 
 }
