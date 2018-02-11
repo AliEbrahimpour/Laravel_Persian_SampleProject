@@ -91,6 +91,8 @@
                 {{--<li><a href="#portfolio">اخبار</a></li>--}}
                 <li><a href="#testimonials">اخبار</a></li>
                 <li><a href="#team">اساتید</a></li>
+                <li><a href="/suggest">پیشنهادات</a></li>
+
                 {{--<li class="menu-has-children"><a href="">Drop Down</a>--}}
                     {{--<ul>--}}
                         {{--<li><a href="#">Drop Down 1</a></li>--}}
