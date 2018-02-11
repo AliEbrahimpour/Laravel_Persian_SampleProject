@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Classes\driver\ManagementCourseAvailable;
+use App\suggest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Classes\driver\News;
@@ -31,10 +32,5 @@ class HomeController extends Controller
     public function suggest(){
         return view('user.suggest');
     }
-
-    public function sendsuggest(Request $request){
-        
-    }
-
 
 }

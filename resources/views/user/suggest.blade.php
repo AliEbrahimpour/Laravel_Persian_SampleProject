@@ -12,14 +12,14 @@
             <div class="row margin-50">
 
                 <div class="col-sm-8">
-                    <input class="form-control" type="text" name="name">
+                    <input class="form-control" type="text" name="name" value="a">
                 </div>
-                <div class="col-sm-4">نام و نام خانوادگی :</div>
+                <div class="col-sm-4" >نام و نام خانوادگی :</div>
             </div>
 
             <div class="row margin-50">
                 <div class="col-sm-8">
-                    <input type="email" class="form-control" name="email">
+                    <input type="email" class="form-control" name="email" value="a@b.c">
                 </div>
 
                 <div class="col-sm-4">ایمیل :</div>
@@ -27,7 +27,7 @@
 
             <div class="row margin-50">
                 <div class="col-sm-8">
-                    <input class="form-control " type="text" name="number">
+                    <input class="form-control " type="text" name="number"  value="123">
                 </div>
 
                 <div class="col-sm-4">شماره تماس :</div>
@@ -48,7 +48,7 @@
 
             <div class="row margin-50">
                 <div class="col-sm-8">
-                    <textarea class="form-control" style="height: 150px;" name="suggested"></textarea>
+                    <textarea class="form-control" style="height: 150px;" name="suggested">asd</textarea>
 
                 </div>
 

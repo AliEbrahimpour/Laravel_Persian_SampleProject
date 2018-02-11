@@ -70,12 +70,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth_admin'], function () {
     Route::post('semester/new/post', 'Admin\SemesterController@post');
     Route::get('student/financial_record', 'Admin\FinancialRecordController@get');
 });
-
+Route::post('sendsuggest', 'SuggesrController@sendsuggest');
 Route::get('admin/login', ['as' => 'login', 'uses' => 'Admin\LoginController@get']);
 Route::post('admin/login/post', 'Admin\LoginController@post');
 Route::post('admin/logout', 'Admin\LogoutController@logout');
 Route::get('suggest', 'User\HomeController@suggest');
-Route::post('sendsuggest', 'User\HomeController@sendsuggest');
+
 Route::get('not_found', 'Admin\NotFoundController@get');
 
 
