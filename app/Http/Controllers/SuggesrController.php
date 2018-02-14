@@ -15,7 +15,7 @@ class SuggesrController extends Controller
         $sgst->phone=$request->number;
         $sgst->email=$request->email;
         $sgst->care=$request->important;
-        $sgst->suggest=$request->suggested;
+        $sgst->comment=$request->suggested;
         $sgst->save();
         return view('user.suggest');
     }
