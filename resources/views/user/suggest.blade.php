@@ -7,7 +7,7 @@
     <div class="container well"  style="margin-top: 20px; text-align: center; font-family: 'B Nazanin';border: solid 1px;background: rgba(255,230,230,.8) ">
         <form class="form-group margin-50" method="post" action="/postted">
             {{ csrf_field() }}
-            <h2 >
+            <h2>
                 پیشنهادات و انتقادات
             </h2>
             <div class="row margin-50">

@@ -35,32 +35,25 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                @if($suggest == false)
-                                    <div class="row">
-                                        <div class="col-xs-12 col-md-6 pull-right">
-                                            <div class="alert alert-info alert-with-icon" data-notify="container">
-                                                <i data-notify="icon" class="flaticon-info-sign"></i>
-                                                <span data-notify="message">هیچ پیشنهادی یافت نشد. لطفا پیشنهادات جدیدی وارد کنید.</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @else
+
                                     <div class="table-responsive">
                                         <table id="" class="table">
                                             <thead class="text-primary">
                                             <tr>
-                                                <th class="col-xs-1 text-right">ردیف</th>
-                                                <th class="col-xs-5 text-right">عنوان پیشنهادات</th>
-                                                <th class="col-xs-4 text-right">تاریخ ثبت پیشنهادات</th>
+                                                <th class="col-xs-1 text-right">نام</th>
+                                                <th class="col-xs-5 text-right">تلفن</th>
+                                                <th class="col-xs-2 text-right">ایمیل</th>
+                                                <th class="col-xs-2 text-right">تاریخ ثبت پیشنهادات</th>
                                                 <th class="col-xs-2 text-right">عملیات</th>
                                             </tr>
                                             </thead>
                                             <tbody data-content="content_table">
-                                            @foreach($sug as $one_sug)
+                                            @foreach($suggests as $one_sug)
                                                 <tr data-status="">
-                                                    <td>{{$counter_sug = $counter_sug +1}}</td>
-                                                    <td data-id="{{$one_sug->id}}" class="">{{$one_sug->title}}</td>
-                                                    <td class="">{{$one_sug->publish_date}}</td>
+                                                    <td class="">{{$one_sug->name}}</td>
+                                                    <td class="">{{$one_sug->phone}}</td>
+                                                    <td class="">{{$one_sug->email}}</td>
+                                                    <td class="">{{$one_sug->comment}}</td>
                                                     <td class="actional">
                                                         <span data-id="{{$one_sug->id}}" data-title="delete_sug"
                                                               class="flaticon-trash-2 delete_sug_button"
@@ -86,7 +79,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                @endif
+
                             </div>
                         </div>
                     </div>
