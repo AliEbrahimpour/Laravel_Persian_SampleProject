@@ -12,9 +12,11 @@
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth_admin'], function () {
-
     Route::get('home', 'Admin\AdminController@get');
+
     Route::get('news/list/{page_num}', 'Admin\NewsController@get');
+    Route::get('suggest/{page_num}', 'SuggesrController@get');
+
     Route::get('news/new', 'Admin\NewsNewController@get');
     Route::get('news/edit/{title}', 'Admin\NewsEditController@get');
 
@@ -72,22 +74,25 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth_admin'], function () {
     Route::get('student/financial_record', 'Admin\FinancialRecordController@get');
 });
 
+Route::get('suggest', 'User\HomeController@suggest');
+Route::post('postted', 'SuggesrController@sendsuggest');
 Route::get('admin/login', ['as' => 'login', 'uses' => 'Admin\LoginController@get']);
 Route::post('admin/login/post', 'Admin\LoginController@post');
 Route::post('admin/logout', 'Admin\LogoutController@logout');
 
+
 Route::get('not_found', 'Admin\NotFoundController@get');
 
 
-Route::group(['prefix' => 'user'], function () {
 
-    Route::get('home', 'User\HomeController@get');
-    Route::post('home2', 'User\HomeController@post2')->name('home');
+
+    Route::get('/', 'User\HomeController@get');
+    Route::post('home/post', 'User\HomeController@post');
 
     Route::get('news/details', 'User\NewsDetailsController@get');
-   
 
-});
+
+
 
 Route::group(['prefix' => 'student', 'middleware' => 'auth_student'], function () {
     Route::get('home', 'Student\HomeController@get');
